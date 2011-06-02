@@ -2,8 +2,8 @@ package com.droidities;
 
 import android.app.Activity;
 import android.widget.Toast;
-import com.pivotallabs.injected.InjectedTestRunner;
 import com.xtremelabs.robolectric.Robolectric;
+import com.xtremelabs.robolectric.RobolectricTestRunner;
 import com.xtremelabs.robolectric.shadows.ShadowToast;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
-@RunWith(InjectedTestRunner.class)
+@RunWith(RobolectricTestRunner.class)
 public class ToasterTest {
     @Test
     public void showToast_shouldShowAToastWithTheProvidedMessage() throws Exception {
